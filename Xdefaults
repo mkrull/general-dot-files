@@ -19,7 +19,6 @@ URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 URxvt.depth:                32
 URxvt.geometry:             120x50
-!urxvt*background:           rgba:0000/0430/0540/c800
 URxvt.transparent:          false
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
@@ -55,7 +54,7 @@ URxvt.cursorUnderline:      true
 ! Pointer
 URxvt.pointerBlank:         true
 
-*background: #002b36
+*background: [93]#002b36
 *foreground: #e5e5e5
 
 !! black dark/light
