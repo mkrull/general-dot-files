@@ -1,15 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 DOTFILES=$(pwd)
 NAME=$(basename ${0})
 
-for file in $(ls -I ${NAME} ${DOTFILES}); do
-    if [ -f "${HOME}/.${file}" ]; then
-        echo "mv ${HOME}/.${file} ${HOME}/dot_${file}.bak"
-        mv "${HOME}/.${file}" "${HOME}/dot_${file}.bak"
+for node in $(ls -I ${NAME} -I Makefile ${DOTFILES}); do
+    dest="${HOME}/.${node}"
+    src="${DOTFILES}/${node}"
+    if [ -e "$dest" ]; then
+        continue
     fi
 
-    echo "ln -s ${DOTFILES}/${file} ${HOME}/.${file}"
-    ln -s "${DOTFILES}/${file}" "${HOME}/.${file}"
+    ln -s "$src" "$dest"
 done
-
