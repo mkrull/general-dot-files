@@ -3,7 +3,7 @@
 !-------------------------------------------------------------------------------
 
 Xft.dpi:                    96
-Xft.antialias:              false
+Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
@@ -54,7 +54,7 @@ URxvt.cursorUnderline:      true
 ! Pointer
 URxvt.pointerBlank:         true
 
-*background: [93]#002b36
+*background: #002b36
 *foreground: #e5e5e5
 
 !! black dark/light
